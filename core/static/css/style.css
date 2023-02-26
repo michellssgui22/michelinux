@@ -1,0 +1,42 @@
+@font-face {
+    font-family: montserrat;
+    src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: rajdhani;
+    src: url(../fonts/Rajdhani/Rajdhani-Regular.ttf);
+}
+
+@font-face {
+    font-family: shadows;
+    src: url(../fonts/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf);
+}
+
+body{
+    font-family: montserrat;
+}
+
+header{
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(4, 4, 10), rgb(15, 15, 15), rgb(10, 10, 10), rgb(0, 0, 0), rgb(3, 3, 15), rgb(0, 0, 0)) !important;
+}
+
+header h1.titulo{
+    font-family: shadows;
+}
+
+header nav a{
+    font-size: 1.2rem !important;
+    font-family: rajdhani;
+}
+
+/* Configurações dos botões de navegação lateral */
+.botoes-nav{
+    position: fixed;
+    top: 45%;
+    right: 0;
+    width: 70px;
+    height: auto;
+    padding: 0;
+    text-align: center;
+}
