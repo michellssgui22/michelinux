@@ -1,8 +1,13 @@
 <section class="d-flex justify-content-between align-items-center py-5 container">
+    {%for bv in boasvindas%}
+
     <div class="d-flex justify-content-start align-items-center w-50 mr-3">
-        <img src="../static/img/livros.png" alt="" class="w-75 ml-0">
+        <img src="{{bv.imagem.thumb.url}}" alt="" class="w-75 ml-0">
     </div>
     <div class="d-flex justify-content-center align-items-center  w-50 ml-3">
-        <p class="text-secondary text-justify" style="font-size: 1.2rem;">Seja bem vindo ao meu portifólio, abaixo seguem minhas informações acadêmicas e uma pequena lista dos principais projetos já desenvolvidos por mim. Você pode ver a lista completa navegando no menu acima em "Projetos" e ou visualizar os códigos fontes destes no meu <a href="#">GitHub</a>.</p>
+        <p class="text-secondary text-justify" style="font-size: 1.2rem;">
+            {{bv.mensagem}} <a href="https://github.com/michellssgui22" target="_blank">GitHub</a>.
+        </p>
+    {%endfor%}
     </div>
 </section>

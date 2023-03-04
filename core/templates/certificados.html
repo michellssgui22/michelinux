@@ -4,53 +4,19 @@
     <h2 class="pb-2 border-bottom">Certificados</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
 
+      {%for c in certificado%} 
       <div class="feature col px-3 mb-5">
         <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <img src="../static/img/python.png" alt=""  width="50px" height="auto" class="mx-auto">
+            <img src="{{c.imagem.thumb.url}}" alt=""  width="50px" height="auto" class="mx-auto">
         </div>
-        <h4 class="fs-2">Python</h4>
-        <h5 class="text-secondary">Udemy</h5>
-        <h5 class="d-flex justify-content-between align-items-center border-bottom border-primary">Conclusão: 24/12/2022<span class="text-light border border-primary rounded py-1 px-2 mb-1 bg-secondary" style="font-size: 0.8rem;">32h</span></h5>
-        <a href="#" class="icon-link d-inline-flex align-items-center">
+        <h4 class="fs-2">{{c.titulo}}</h4>
+        <h5 class="text-secondary">{{c.instituicao}}</h5>
+        <h5 class="d-flex justify-content-between align-items-center border-bottom border-primary">Conclusão: {{c.conclusao}}<span class="text-light border border-primary rounded py-1 px-2 mb-1 bg-secondary" style="font-size: 0.8rem;">{{c.horas}}h</span></h5>
+        <a href="{{c.linkvalida}}" class="icon-link d-inline-flex align-items-center" target="_blank">
           Verificar validação
         </a>
       </div>
-
-      <div class="feature col px-3 mb-5">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <img src="../static/img/sql.png" alt=""  width="50px" height="auto" class="mx-auto">
-        </div>
-        <h4 class="fs-2">SQL</h4>
-        <h5 class="text-secondary">Udemy</h5>
-        <h5 class="d-flex justify-content-between align-items-center border-bottom border-primary">Conclusão: 24/12/2022<span class="text-light border border-primary rounded py-1 px-2 mb-1 bg-secondary" style="font-size: 0.8rem;">32h</span></h5>
-        <a href="#" class="icon-link d-inline-flex align-items-center">
-          Verificar validação
-        </a>
-      </div>
-
-      <div class="feature col px-3 mb-5">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <img src="../static/img/sql.png" alt=""  width="50px" height="auto" class="mx-auto">
-        </div>
-        <h4 class="fs-2">SQL</h4>
-        <h5 class="text-secondary">Udemy</h5>
-        <h5 class="d-flex justify-content-between align-items-center border-bottom border-primary">Conclusão: 24/12/2022<span class="text-light border border-primary rounded py-1 px-2 mb-1 bg-secondary" style="font-size: 0.8rem;">32h</span></h5>
-        <a href="#" class="icon-link d-inline-flex align-items-center">
-          Verificar validação
-        </a>
-      </div>
-
-      <div class="feature col px-3 mb-5">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <img src="../static/img/sql.png" alt=""  width="50px" height="auto" class="mx-auto">
-        </div>
-        <h4 class="fs-2">SQL</h4>
-        <h5 class="text-secondary">Udemy</h5>
-        <h5 class="d-flex justify-content-between align-items-center border-bottom border-primary">Conclusão: 24/12/2022<span class="text-light border border-primary rounded py-1 px-2 mb-1 bg-secondary" style="font-size: 0.8rem;">32h</span></h5>
-        <a href="#" class="icon-link d-inline-flex align-items-center">
-          Verificar validação
-        </a>
-      </div>
+      {%endfor%}
 
     </div>
   </div>
